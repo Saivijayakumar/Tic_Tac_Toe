@@ -18,30 +18,6 @@ namespace Tic_Tac_Toe
             }
             return board;
         }
-        public static void Choose ()
-        {
-            string computerChoice;
-            Console.WriteLine("Enter your choice X or O");
-            string user = Console.ReadLine();
-            if(user.ToUpper().Equals("X") || user.ToUpper().Equals("O"))
-            {
-                switch (user.ToUpper())
-                {
-                    case "X":
-                        computerChoice = "O";
-                        break;
-                    default:
-                        //Console.WriteLine("Wrong choice");
-                        computerChoice = "X";
-                        break;
-                }
-                Console.WriteLine(computerChoice);
-            }
-            else
-            {
-                Console.WriteLine("Wrong choice please Enter X or O ");
-            }
-            
-        }
+        
     }
 }

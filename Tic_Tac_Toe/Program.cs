@@ -8,11 +8,13 @@ namespace Tic_Tac_Toe
 {
     class Program
     {
+        /// <summary>
+        ///------>Wellcome<-----
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
             char[] board = TicTacToeGame.CreatingBoard();
-            //TicTacToeGame.CreatingBoard();
-            TicTacToeGame.Choose();
             Console.Read();
         }
     }
