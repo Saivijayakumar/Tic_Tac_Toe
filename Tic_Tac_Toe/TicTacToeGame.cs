@@ -18,7 +18,7 @@ namespace Tic_Tac_Toe
             }
             return board;
         }
-        public static void Choose()
+        public static string Choose()
         {
             string computerChoice;
             Console.WriteLine("Enter your choice X or O");
@@ -34,21 +34,36 @@ namespace Tic_Tac_Toe
                         computerChoice = "X";
                         break;
                 }
-                Console.WriteLine(computerChoice);
             }
             else
             {
                 Console.WriteLine("Wrong choice please Enter X or O ");
             }
+            return user;
         }
 
-        public static char[] DisplayBoard(char[] board)
+        public static void DisplayBoard(char[] board)
         {
             Console.WriteLine(board[1] + " | " + board[2] + " | " + board[3]);
             Console.WriteLine("------------");
             Console.WriteLine(board[4] + " | " + board[5] + " | " + board[6]);
             Console.WriteLine("------------");
             Console.WriteLine(board[7] + " | " + board[8] + " | " + board[9]);
+        }
+
+        public static char[] PositionSelect(char[] board)
+        {
+            string cho = Choose();
+            Console.WriteLine("Enter at what position you want to add ");
+            int position = Convert.ToInt32(Console.ReadLine());
+            if (board[position].Equals(board[0]))
+            {
+                board[position] = Convert.ToChar(cho);
+            }
+            else
+            {
+                Console.WriteLine("This block is taken chose another");
+            }
             return board;
         }
     }

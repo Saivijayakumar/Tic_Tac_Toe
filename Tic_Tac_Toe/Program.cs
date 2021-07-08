@@ -16,7 +16,8 @@ namespace Tic_Tac_Toe
         {
             char[] board = TicTacToeGame.CreatingBoard();
             TicTacToeGame.DisplayBoard(board);
-            TicTacToeGame.Choose();
+            TicTacToeGame.PositionSelect(board);
+            TicTacToeGame.DisplayBoard(board);
             Console.Read();
         }
     }
