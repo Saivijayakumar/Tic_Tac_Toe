@@ -15,6 +15,8 @@ namespace Tic_Tac_Toe
         static void Main(string[] args)
         {
             char[] board = TicTacToeGame.CreatingBoard();
+            TicTacToeGame.DisplayBoard(board);
+            TicTacToeGame.Choose();
             Console.Read();
         }
     }
