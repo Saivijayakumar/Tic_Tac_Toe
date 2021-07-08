@@ -53,16 +53,21 @@ namespace Tic_Tac_Toe
 
         public static char[] PositionSelect(char[] board)
         {
-            string cho = Choose();
-            Console.WriteLine("Enter at what position you want to add ");
-            int position = Convert.ToInt32(Console.ReadLine());
-            if (board[position].Equals(board[0]))
+            while (true)
             {
-                board[position] = Convert.ToChar(cho);
-            }
-            else
-            {
-                Console.WriteLine("This block is taken chose another");
+                string cho = Choose();
+                Console.WriteLine("Enter at what position you want to add ");
+                int position = Convert.ToInt32(Console.ReadLine());
+                if (board[position].Equals(board[0]))
+                {
+                    board[position] = Convert.ToChar(cho);
+                    DisplayBoard(board);
+                }
+                else
+                {
+                    Console.WriteLine("This block is taken chose another");
+                    break;
+                }
             }
             return board;
         }
