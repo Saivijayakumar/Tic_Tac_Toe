@@ -41,6 +41,7 @@ namespace Tic_Tac_Toe
                 Console.WriteLine("Wrong choice please Enter X or O ");
             }
         }
+
         public static char[] DisplayBoard(char[] board)
         {
             Console.WriteLine(board[1] + " | " + board[2] + " | " + board[3]);
